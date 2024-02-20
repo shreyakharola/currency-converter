@@ -1,13 +1,14 @@
-Currency Converter
+**Currency Converter**
 Convert currencies with ease using this simple and effective Currency Converter web application.
 
-Features
+**Features**
 Convert between different currencies.
 User-friendly interface.
 Real-time currency conversion rates.
 Input validation to ensure accurate conversions.
 Catchy and intuitive design.
-Technologies Used
+
+**Technologies Used**
 HTML
 CSS
 JavaScript
