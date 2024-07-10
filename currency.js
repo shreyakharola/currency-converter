@@ -1,4 +1,4 @@
-const BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/";
+const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
 const dropdowns = document.querySelectorAll(".dropdown select");
 const button=document.querySelector("form button");
@@ -56,12 +56,12 @@ button.addEventListener("click", async (evt)=>{
         alert("Please select different currencies for conversion.");
         return; // Stop further execution
     }
-
-    const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
+//const URL remove toCrr
+    const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
     let response = await fetch(URL);
     let data = await response.json();
-    let rate=data[toCurr.value.toLowerCase()];
-    
+    let rate=data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
+    //add fromCrr.value to rate as toCrr is added
     let finalAmount = amtVal * rate;
     msg.innerText=`${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 });
