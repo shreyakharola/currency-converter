@@ -20,4 +20,4 @@ Click the "Convert" button to see the converted amount.
 Installation
 No installation required. Simply open the index.html file in your web browser to start using the Currency Converter.
 
-
+**Live link of the Project: https://shreyakharola.github.io/currency-converter/currency.html
